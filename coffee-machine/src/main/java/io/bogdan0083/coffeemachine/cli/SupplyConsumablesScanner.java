@@ -1,6 +1,6 @@
 package io.bogdan0083.coffeemachine.cli;
 
-import io.bogdan0083.coffeemachine.Consumables;
+import io.bogdan0083.coffeemachine.CoffeeConsumables;
 
 import java.util.Scanner;
 
@@ -11,17 +11,17 @@ public class SupplyConsumablesScanner {
         this.scanner = scanner;
     }
 
-    public Consumables scan() {
+    public CoffeeConsumables scan() {
         int water = scanWaterAmount();
         int milk = scanMilkAmount();
         int coffeeBeans = scanCoffeeBeansAmount();
         int cups = scanCoffeeCupsAmount();
 
-        Consumables scanned = new Consumables();
+        CoffeeConsumables scanned = new CoffeeConsumables();
 
         scanned.water = water;
         scanned.milk = milk;
-        scanned.coffeeBeans = coffeeBeans;
+        scanned.beans = coffeeBeans;
         scanned.cups = cups;
         return scanned;
     }

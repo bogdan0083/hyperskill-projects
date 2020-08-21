@@ -13,11 +13,11 @@ public class CoffeeMachine {
         this.state.setMoney(0);
     }
 
-    public void fill(Consumables consumables) {
-        state.setWater(state.getWater() + consumables.water);
-        state.setMilk(state.getMilk() + consumables.milk);
-        state.setBeans(state.getBeans() + consumables.coffeeBeans);
-        state.setCups(state.getCups() + consumables.cups);
+    public void fill(CoffeeConsumables coffeeConsumables) {
+        state.setWater(state.getWater() + coffeeConsumables.water);
+        state.setMilk(state.getMilk() + coffeeConsumables.milk);
+        state.setBeans(state.getBeans() + coffeeConsumables.beans);
+        state.setCups(state.getCups() + coffeeConsumables.cups);
     }
 
     public CoffeeMachineState getState() {
@@ -33,6 +33,7 @@ public class CoffeeMachine {
         int milkAfterPurchase = state.getMilk() - coffee.getMilk();
         int beansAfterPurchase = state.getBeans() - coffee.getBeans();
         int cupsAfterPurchase = state.getCups() - 1;
+        int moneyAfterPurchase = state.getMoney() + coffee.getPrice();
 
         if (waterAfterPurchase < 0) {
             throw new CoffeePurchaseException("Sorry, not enough water!");
@@ -50,11 +51,11 @@ public class CoffeeMachine {
             throw new CoffeePurchaseException("Sorry, not enough disposable cups!");
         }
 
-        state.setWater(state.getWater() - coffee.getWater());
-        state.setMilk(state.getMilk() - coffee.getMilk());
-        state.setBeans(state.getBeans() - coffee.getBeans());
-        state.setMoney(state.getMoney() + coffee.getPrice());
-        state.setCups(state.getCups() - 1);
+        state.setWater(waterAfterPurchase);
+        state.setMilk(milkAfterPurchase);
+        state.setBeans(beansAfterPurchase);
+        state.setMoney(moneyAfterPurchase);
+        state.setCups(cupsAfterPurchase);
     }
 
     public static class Builder {

@@ -133,8 +133,8 @@ public class CoffeeMachineCLI implements Runnable {
 
     private void processFilling() {
         SupplyConsumablesScanner supplyScanner = new SupplyConsumablesScanner(this.scanner);
-        Consumables consumables = supplyScanner.scan();
-        coffeeMachine.fill(consumables);
+        CoffeeConsumables coffeeConsumables = supplyScanner.scan();
+        coffeeMachine.fill(coffeeConsumables);
     }
 
 }

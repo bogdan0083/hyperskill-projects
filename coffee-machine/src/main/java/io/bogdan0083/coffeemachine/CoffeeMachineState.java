@@ -1,6 +1,8 @@
 package io.bogdan0083.coffeemachine;
 
-public class CoffeeMachineState {
+import java.util.Objects;
+
+public class CoffeeMachineState implements Cloneable {
 
     private int water;
     private int milk;
@@ -54,6 +56,28 @@ public class CoffeeMachineState {
 
     public void setMoney(int money) {
         this.money = money;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CoffeeMachineState state = (CoffeeMachineState) o;
+        return water == state.water &&
+                milk == state.milk &&
+                beans == state.beans &&
+                cups == state.cups &&
+                money == state.money;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(water, milk, beans, cups, money);
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
 
