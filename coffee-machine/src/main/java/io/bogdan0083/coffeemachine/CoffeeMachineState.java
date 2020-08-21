@@ -2,15 +2,18 @@ package io.bogdan0083.coffeemachine;
 
 public class CoffeeMachineState {
 
-    private int water = 400;
-    private int milk = 540;
-    private int beans = 120;
-    private int cups = 9;
-    private int money = 550;
+    private int water;
+    private int milk;
+    private int beans;
+    private int cups;
+    private int money;
 
-    private CoffeeMachineAction chosenAction = CoffeeMachineAction.NONE;
-
-    public CoffeeMachineState() {
+    public CoffeeMachineState(int water, int milk, int beans, int cups, int money) {
+        this.water = water;
+        this.milk = milk;
+        this.beans = beans;
+        this.cups = cups;
+        this.money = money;
     }
 
     public int getWater() {
@@ -51,17 +54,6 @@ public class CoffeeMachineState {
 
     public void setMoney(int money) {
         this.money = money;
-    }
-
-    public CoffeeMachineAction getChosenAction() {
-        return chosenAction;
-    }
-
-    public void setChosenAction(CoffeeMachineAction chosenAction) {
-        this.chosenAction = chosenAction;
-    }
-
-    public void print() {
     }
 }
 
