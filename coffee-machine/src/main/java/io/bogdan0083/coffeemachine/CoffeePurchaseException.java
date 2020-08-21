@@ -1,6 +1,6 @@
 package io.bogdan0083.coffeemachine;
 
-class CoffeePurchaseException extends Exception {
+public class CoffeePurchaseException extends Exception {
     public CoffeePurchaseException() {
         super();
     }

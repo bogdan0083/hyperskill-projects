@@ -1,4 +1,6 @@
-package io.bogdan0083.coffeemachine;
+package io.bogdan0083.coffeemachine.cli;
+
+import io.bogdan0083.coffeemachine.Consumables;
 
 import java.util.Scanner;
 

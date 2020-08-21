@@ -62,13 +62,6 @@ public class CoffeeMachineState {
     }
 
     public void print() {
-        System.out.println("The coffee machine has:");
-        System.out.println(this.getWater() + " of water");
-        System.out.println(this.getMilk() + " of milk");
-        System.out.println(this.getBeans() + " of coffee beans");
-        System.out.println(this.getCups() + " of disposable cups");
-        System.out.println("$" + this.getMoney() + " of money");
-        System.out.println();
     }
 }
 
