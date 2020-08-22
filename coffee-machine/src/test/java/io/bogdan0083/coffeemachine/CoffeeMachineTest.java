@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// TODO: 22.08.2020 rewrite assertions on Assertj
 class CoffeeMachineTest {
 
     private final CoffeeMachine coffeeMachine = new CoffeeMachine.Builder().build();
@@ -74,7 +75,7 @@ class CoffeeMachineTest {
         CoffeeConsumables coffeeHugeConsumables = TestUtils.getHugeCoffeeConsumables();
 
         assertDoesNotThrow(() -> coffeeMachine.buy(new Espresso()));
-        assertThrows(CoffeePurchaseException.class, () -> coffeeMachine.buy(new Latte()));
+        assertThrows(CoffeePurchaseException.class, () -> coffeeMachine.buy(new Espresso()));
 
         coffeeMachine.fill(coffeeHugeConsumables);
 
