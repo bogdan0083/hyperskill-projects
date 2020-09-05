@@ -14,4 +14,4 @@ TODO: create link to coffee machine repo
 Right now only [Coffee Machine project]() is available but I plan to add more projects as I'm making progress. Stay tuned!
 
 ## Contributions
-Contributions are always welcome! Open an issue of send a Pull Request if you think that something need to be changed. I'm always open to suggestions!
+Contributions are always welcome! Open an issue or send a Pull Request if you think that something need to be changed. I'm always open to suggestions!
