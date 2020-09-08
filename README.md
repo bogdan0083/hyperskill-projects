@@ -1,5 +1,5 @@
 # Hyperskill Projects
-This repository contains all the projects I built on [Hyperskill Platform](https://hyperskill.org/) (so called "JetBrains Academy").
+This repository contains all the projects I built on [Hyperskill Platform](https://hyperskill.org/) (a.k.a "JetBrains Academy").
 
 On Hyperskill platform I usually create a simple PoC implementation of the project and then I refactor it here to make it slick:
 
