@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-// TODO: 22.08.2020 rewrite assertions on Assertj
 class CoffeeMachineTest {
 
     private final CoffeeMachine coffeeMachine = new CoffeeMachine.Builder().build();

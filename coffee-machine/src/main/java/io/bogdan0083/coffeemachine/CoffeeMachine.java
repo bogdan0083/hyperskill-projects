@@ -59,7 +59,6 @@ public class CoffeeMachine {
     }
 
     public static class Builder {
-        // TODO: 21.08.2020 learn the difference between protected and private fields
         protected int water = 400;
         protected int milk = 540;
         protected int beans = 120;
