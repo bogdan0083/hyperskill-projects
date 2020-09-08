@@ -20,10 +20,10 @@ public class ShiftCipher implements Cipher {
                     }
                     if (Character.isLowerCase(ch)) {
                         int newChar = ch + key;
-                        return Math.min(newChar, 'a' + (newChar % 'z' - 1));
+                        return Math.min(newChar, 'a' + ((newChar - 1) % 'z'));
                     } else {
                         int newChar = ch + key;
-                        return Math.min(newChar, 'A' + (newChar % 'Z' - 1));
+                        return Math.min(newChar, 'A' + ((newChar - 1) % 'Z'));
                     }
                 })
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
@@ -42,6 +42,11 @@ public class ShiftCipher implements Cipher {
      */
     @Override
     public String decode(String encodedString, int key) {
+
+        if (key == 0) {
+            return encodedString;
+        }
+
         return encodedString.chars()
                 .map(ch -> {
                     if (!Character.isAlphabetic(ch)) {
@@ -49,10 +54,10 @@ public class ShiftCipher implements Cipher {
                     }
                     if (Character.isLowerCase(ch)) {
                         int newChar = ch - key;
-                        return Math.max(newChar, 'z' + 1 - ('a' % newChar));
+                        return Math.max(newChar, 'z' - ('a' % (newChar + 1)));
                     } else {
                         int newChar = ch - key;
-                        return Math.max(newChar, 'Z' + 1 - ('A' % newChar));
+                        return Math.max(newChar, 'Z' - ('A' % (newChar + 1)));
                     }
                 })
                 .collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)

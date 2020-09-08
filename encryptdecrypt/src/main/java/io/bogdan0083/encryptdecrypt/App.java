@@ -19,7 +19,7 @@ import java.util.HashMap;
  * functionalities based on {@link UnicodeCipher}
  * and {@link ShiftCipher} algorithms
  */
-public class Main {
+public class App {
     public static void main(String[] args) {
         HashMap<String, String> argsMap;
 

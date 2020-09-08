@@ -88,13 +88,11 @@ class CoffeeMachineTest {
     void testTakeMoney() {
         int moneyBeforeTake = coffeeMachine.getMoneyAmount();
 
-        System.out.println(moneyBeforeTake);
         assertDoesNotThrow(() -> coffeeMachine.buy(new Espresso()));
 
         coffeeMachine.takeMoney();
 
         int moneyAfterTake = coffeeMachine.getMoneyAmount();
-        System.out.println(moneyAfterTake);
 
         assertNotEquals(moneyBeforeTake, moneyAfterTake);
     }
@@ -107,6 +105,7 @@ class CoffeeMachineTest {
                 .withMilk(9999)
                 .withBeans(9999)
                 .withMoney(9999)
+                .withCups(9999)
                 .build();
 
         assertDoesNotThrow(() -> megaMachine.buy(new Espresso()));
