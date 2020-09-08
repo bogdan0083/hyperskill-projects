@@ -9,9 +9,8 @@ On Hyperskill platform I usually create a simple PoC implementation of the proje
  * Be happy!
  
 ## Available projects
-TODO: create link to coffee machine repo
-
-Right now only [Coffee Machine project]() is available but I plan to add more projects as I'm making progress. Stay tuned!
+* [Coffee Machine](https://github.com/bogdan0083/hyperskill-projects/tree/master/coffee-machine)
+* [EncryptDecrypt](https://github.com/bogdan0083/hyperskill-projects/tree/master/encryptdecrypt)
 
 ## Contributions
 Contributions are always welcome! Open an issue or send a Pull Request if you think that something need to be changed. I'm always open to suggestions!
